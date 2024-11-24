@@ -8,6 +8,6 @@ public class SpringBootSelfStudyApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootSelfStudyApplication.class, args);
-		System.out.println("hello world");
+		System.out.println("HELLO WORLD");
 	}
 }
