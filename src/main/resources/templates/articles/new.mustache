@@ -1,9 +1,25 @@
 {{>layouts/header}}
 
-<form action="">
-    <input type="text">
-    <textarea></textarea>
-    <button type="submit">Submit</button>
+<!--<form action="">-->
+<!--    <input type="text">-->
+<!--    <textarea></textarea>-->
+<!--    <button type="submit">Submit</button>-->
+<!--</form>-->
+
+<form class="container" action="/articles/create" method="post">
+<!--    위의 페이지로 폼 데이터를 보내겠다-->
+    <div class="mb-3">
+        <label class="form-label">title</label>
+        <input type="text" class="form-control" name="title">
+<!--        dto의 필드와 연결해야 하니 클래스의 필드명과 name이 같아야 한다 -->
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">content</label>
+        <textarea class="form-control" rows="3" name="content"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">submit</button>
 </form>
 
 {{>layouts/footer}}

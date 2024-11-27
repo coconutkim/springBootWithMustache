@@ -11,7 +11,7 @@ public class FirstController {
 
     @GetMapping("/hi")
     public String niceToMeetYou(Model model){
-        model.addAttribute("username", "seventeen");
+        model.addAttribute("username", "jeonghan");
        return "greetings"; //greetings.mustache 파일을 반환한다
     }
 
