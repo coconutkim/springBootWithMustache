@@ -42,7 +42,7 @@ public class ArticleController {
         //System.out.println(saved.toString()); //article이 데이터베이스에 저장되는지 확인
         return "";
     }
-
+    
     @GetMapping("/articles/{id}") //데이터 조회 요청을 접수한다
     //컨트롤러에서 url 변수를 사용할 때는 중괄호 하나만 사용한다
     public String show(@PathVariable Long id, Model model){ //매개변수로 id를 받는다
