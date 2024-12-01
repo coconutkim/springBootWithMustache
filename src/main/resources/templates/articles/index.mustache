@@ -1,0 +1,39 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <!--        <th scope="col">Last</th>-->
+        <th scope="col">content</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--    <tr>-->
+    <!--        <th scope="row">1</th>-->
+    <!--        <td>Mark</td>-->
+    <!--        <td>Otto</td>-->
+    <!--        <td>@mdo</td>-->
+    <!--    </tr>-->
+    <!--    <tr>-->
+    <!--        <th scope="row">2</th>-->
+    <!--        <td>Jacob</td>-->
+    <!--        <td>Thornton</td>-->
+    <!--        <td>@fat</td>-->
+    <!--    </tr>-->
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+<!--            아이디가 1번인 게시글의 제목을 클리하면 /articles/1 페이지로 이동-->
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+<!--    articleList에 있는 데이터의 수만큼 이 부분을 반복 실행-->
+    </tbody>
+</table>
+
+<a href="/articles/new">new article</a>
+
+{{>layouts/footer}}

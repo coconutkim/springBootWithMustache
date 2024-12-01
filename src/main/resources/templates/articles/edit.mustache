@@ -1,0 +1,28 @@
+{{>layouts/header}}
+
+{{#article}}
+<!--    article.xxxx가 반복되는게 싫을 때 사용하는 문법-->
+<form class="container" action="/articles/update" method="post">
+<!--    액션 속성은 폼 데이터를 어디로 보낼지 url을 지정한다-->
+    <input name="id" type="hidden" value="{{id}}">
+<!--    아이디가 몇 번인 기사를 수정해야 하는지 알려줘야 한다-->
+
+    <!--    위의 페이지로 폼 데이터를 보내겠다-->
+    <div class="mb-3">
+        <label class="form-label">title</label>
+        <input type="text" class="form-control" name="title" value="{{title}}">
+        <!--        dto의 필드와 연결해야 하니 클래스의 필드명과 name이 같아야 한다 -->
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">content</label>
+        <textarea class="form-control" rows="3"
+                  name="content">{{content}}</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">submit</button>
+    <a href="/articles/{{article.id}}" class="btn btn-secondary">back</a>
+</form>
+{{/article}}
+
+{{>layouts/footer}}
